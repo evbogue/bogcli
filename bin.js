@@ -22,7 +22,6 @@ function connect (server) {
   })
 
   ws.onclose = (e) => {
-    peers.delete(id)
     setTimeout(function () {
       connect(server)
     }, 1000)
